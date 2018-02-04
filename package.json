@@ -1,0 +1,18 @@
+{
+  "name": "tree-ls",
+  "version": "0.0.1",
+  "description": "Generate 'tree-like' folder structer in nodejs",
+  "main": "index.js",
+  "bin": {
+    "treels": "bin/treels"
+  },
+  "keywords": [
+    "tree",
+    "nodejs"
+  ],
+  "author": "yvshuo",
+  "license": "MIT",
+  "dependencies": {
+    "commander": "^2.13.0"
+  }
+}

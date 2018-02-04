@@ -1,0 +1,18 @@
+#!/usr/bin/env node
+
+const program = require('commander');
+const treels = require('../src')
+
+program
+    .version(require('../package').version)
+    .usage('<command> [options]')
+
+program.on('--help', function () {
+    console.log('  Examples:')
+    console.log()
+    console.log('    $ treels')
+    console.log()
+});
+
+program.parse(process.argv)
+treels();
