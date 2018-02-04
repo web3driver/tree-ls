@@ -1,6 +1,6 @@
 {
   "name": "tree-ls",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Generate 'tree-like' folder structer in nodejs",
   "main": "index.js",
   "bin": {

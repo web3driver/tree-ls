@@ -10,7 +10,7 @@ $ npm install -g tree-ls
 ### Usage
 
 ``` bash
-$ tree-ls
+$ treels
 ```
 
 A 'tree-like' folder structer will be published to your trminal.
