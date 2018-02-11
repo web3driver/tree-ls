@@ -1,14 +1,16 @@
 {
   "name": "tree-ls",
-  "version": "0.0.2",
-  "description": "Generate 'tree-like' folder structer in nodejs",
-  "main": "index.js",
+  "version": "0.0.4",
+  "description": "Generate 'tree-like' folder structer in nodejs && Analynaze your webpack unused files",
+  "main": "src/index.js",
   "bin": {
     "treels": "bin/treels"
   },
   "keywords": [
     "tree",
-    "nodejs"
+    "nodejs",
+    "webpack",
+    "unused files"
   ],
   "repository": {
     "type": "git",
@@ -17,6 +19,8 @@
   "author": "yvshuo",
   "license": "MIT",
   "dependencies": {
-    "commander": "^2.13.0"
+    "chalk": "^2.3.0",
+    "commander": "^2.13.0",
+    "glob": "^7.1.2"
   }
 }

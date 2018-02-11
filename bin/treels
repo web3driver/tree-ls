@@ -15,4 +15,4 @@ program.on('--help', function () {
 });
 
 program.parse(process.argv)
-treels();
+treels.run();
