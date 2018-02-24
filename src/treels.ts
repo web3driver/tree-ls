@@ -12,7 +12,7 @@ let treeStrArr = ['.']
  * 根据文件路径数组生成tree对象
  * @param {Array} arr 文件路径数组 
  */
-function genTreeObjByPathArr(arr) {
+function genTreeObjByPathArr(arr: Array<string>) {
     return arr.map(function (v) {
         return pathToTreeObj(v)
     }).reduce(function (a, b) {
@@ -24,8 +24,8 @@ function genTreeObjByPathArr(arr) {
  * 单条路径转tree对象
  * @param {String} pathStr 路径字符串
  */
-function pathToTreeObj(pathStr) {
-    let _pathArr = pathStr.split('/');
+function pathToTreeObj(pathStr: string) {
+    let _pathArr: any[] = pathStr.split('/');
     let _length = _pathArr.length;
     let _file = _pathArr[_length - 1];
     let res = {};
@@ -48,10 +48,8 @@ function pathToTreeObj(pathStr) {
 /**
  * 直接读取文件目录并生成tree对象
  * @param {String} basepath 基础路径
- * @param {Number} depth node depth
- * @param {Boolean} isParentLast 是否是树中当前层级最后一个节点
  */
-function genTreeObjByReadFile(basepath) {
+function genTreeObjByReadFile(basepath: string) {
     let res = {};
     let _lists = fs.readdirSync(basepath);
     for (let i = 0; i < _lists.length; i++) {
@@ -71,7 +69,7 @@ function genTreeObjByReadFile(basepath) {
             obj['_type'] = 'File';
             obj['_ext'] = path.extname(v);
             obj['_value'] = v;
-            res[path.basename(v, path.extname(v))] = obj;
+            res[v] = obj;
         }
     }
     return res;
@@ -83,7 +81,7 @@ function genTreeObjByReadFile(basepath) {
  * @param {String} parentIndent 父节点的indent
  * @param {Boolean} isParentLast 父节点是否是最后一个节点
  */
-function genStr(srcObj, parentIndent = '', isParentLast = null) {
+function genStr(srcObj: object, parentIndent: string = '', isParentLast: null | boolean = null) {
     let keyArr = Object.keys(srcObj);
     for (let i = 0; i < keyArr.length; i++) {
         let obj = srcObj[keyArr[i]];
@@ -108,8 +106,8 @@ function print(treeObj) {
     console.log(str)
 }
 
-module.exports = {
-    print: print,
-    genTreeObjByReadFile: genTreeObjByReadFile,
-    genTreeObjByPathArr: genTreeObjByPathArr
+export {
+    print,
+    genTreeObjByReadFile,
+    genTreeObjByPathArr
 }

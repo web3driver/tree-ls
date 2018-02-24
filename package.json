@@ -2,9 +2,12 @@
   "name": "tree-ls",
   "version": "0.0.4",
   "description": "Generate 'tree-like' folder structer in nodejs && Analynaze your webpack unused files",
-  "main": "src/index.js",
+  "main": "lib/index.js",
   "bin": {
     "treels": "bin/treels"
+  },
+  "scripts": {
+    "build": "rm -rf ./lib/* && tsc"
   },
   "keywords": [
     "tree",
@@ -22,5 +25,8 @@
     "chalk": "^2.3.0",
     "commander": "^2.13.0",
     "glob": "^7.1.2"
+  },
+  "devDependencies": {
+    "@types/node": "^9.4.6"
   }
 }

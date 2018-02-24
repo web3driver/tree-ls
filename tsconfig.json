@@ -1,0 +1,11 @@
+{
+    "compilerOptions": {
+        "outDir": "./lib/",        // path to output directory
+        "strictNullChecks": true,   // enable strict null checks as a best practice
+        "target": "es5",            // specify ECMAScript target version
+        "allowJs": true             // allow a partial TypeScript and JavaScript codebase  
+    },
+    "include": [
+        "./src/"
+    ]
+}

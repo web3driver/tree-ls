@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 const program = require('commander');
-const treels = require('../src')
+const treels = require('../lib')
 
 program
     .version(require('../package').version)
